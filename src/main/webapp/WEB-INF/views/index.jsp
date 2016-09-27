@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/resources/css/style.css" />
   </head>
   <body>
-  Start2
   <div id="container"></div>
   <script>
     anychart.onDocumentReady(function() {
