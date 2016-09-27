@@ -6,9 +6,9 @@ This example shows how to run Anychart library with Java programming language us
 ### Running
 First of all you need to set up your MySQL database. Start mysql repl and run commands below
 ```
-create user 'anychart_user'@'localhost' identified by 'anychart_pass';
-create database anychart_db;
-grant all privileges on anychart_db.* to 'anychart_user'@'localhost';
+CREATE USER 'anychart_user'@'localhost' IDENTIFIED BY 'anychart_pass';
+CREATE DATABASE anychart_db;
+GRANT ALL PRIVILEGES ON anychart_db.* TO 'anychart_user'@'localhost';
 
 CREATE TABLE fruits (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
