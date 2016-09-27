@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.anychart"/>
+
+    <mvc:annotation-driven/>
+
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="order" value="1"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!-- Declare a datasource that has pooling capabilities-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close"
+          p:driverClass="com.mysql.jdbc.Driver"
+          p:jdbcUrl="jdbc:mysql://localhost/anychart_db"
+          p:user="anychart_user"
+          p:password="anychart_pass"
+          p:acquireIncrement="5"
+          p:idleConnectionTestPeriod="60"
+          p:maxPoolSize="100"
+          p:maxStatements="50"
+          p:minPoolSize="10" />
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="fruitDAO" class="com.anychart.dao.FruitDAO" depends-on="sessionFactory">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+</beans>
