@@ -4,15 +4,15 @@
 This example shows how to run Anychart library with Java programming language using Maven, Spring MVC, Hibernate and MySQL.
 
 ### Running
-To use this sample you must have
+To use this sample you must have:
 
-1. MySQL installed and running, if not please checkout https://dev.mysql.com/downloads/installer/ and follow instructions http://dev.mysql.com/doc/refman/5.7/en/installing.html
+MySQL installed and running, if not please checkout https://dev.mysql.com/downloads/installer/ and follow instructions http://dev.mysql.com/doc/refman/5.7/en/installing.html
 To check your MySQL installation, run following command in command line:
 ```
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.5.52, for debian-linux-gnu (x86_64) using readline 6. # sample output
 ```
-2. Maven build tool, if not please checkout https://maven.apache.org/install.html
+Maven build tool, if not please checkout https://maven.apache.org/install.html
 To check your Maven installation, run following command in command line:
 ```
 $ mvn --version
