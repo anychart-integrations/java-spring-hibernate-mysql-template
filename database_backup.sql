@@ -1,6 +1,9 @@
-create user 'anychart_user'@'localhost' identified by 'anychart_pass';
-create database anychart_db;
-grant all privileges on anychart_db.* to 'anychart_user'@'localhost';
+CREATE USER 'anychart_user'@'localhost' IDENTIFIED BY 'anychart_pass';
+CREATE DATABASE anychart_db3;
+GRANT ALL PRIVILEGES ON anychart_db.* TO 'anychart_user'@'localhost';
+FLUSH PRIVILEGES;
+
+USE anychart_db;
 
 CREATE TABLE fruits (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
