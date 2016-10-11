@@ -33,7 +33,7 @@ $  mysql < database_backup.sql
 Clone the repository from github.com to your workspace folder:
 
 ```
-$ git clone git@github.com:AnyChart/java-spring-hibernate-mysql-template.git
+$ git clone git@github.com:anychart-integrations/java-spring-hibernate-mysql-template.git
 ```
 
 Navigate to the repository folder:
