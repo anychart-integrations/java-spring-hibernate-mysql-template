@@ -1,5 +1,6 @@
-# AnyChart Java demo example
-### Overview
+[<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
+Java basic template
+=========================
 
 This example shows how to run Anychart library with Java programming language using Maven, Spring MVC, Hibernate and MySQL.
 
@@ -93,3 +94,6 @@ Build tool - [Maven](https://maven.apache.org/)
 * [JavaScript API Reference](https://api.anychart.com)
 * [Code Playground](https://playground.anychart.com)
 * [Technical Support](https://anychart.com/support)
+
+## License
+[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-integrations/golang-http-mysql-template/blob/master/LICENSE).
