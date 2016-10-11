@@ -96,4 +96,4 @@ Build tool - [Maven](https://maven.apache.org/)
 * [Technical Support](https://anychart.com/support)
 
 ## License
-[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-integrations/golang-http-mysql-template/blob/master/LICENSE).
+[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-integrations/java-spring-hibernate-mysql-template/blob/master/LICENSE).
