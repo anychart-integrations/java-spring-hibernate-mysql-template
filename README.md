@@ -7,13 +7,13 @@ This example shows how to run Anychart library with Java programming language us
 ### Running
 To use this sample you must have:
 
-MySQL installed and running, if not please checkout https://dev.mysql.com/downloads/installer/ and follow instructions http://dev.mysql.com/doc/refman/5.7/en/installing.html
+MySQL installed and running, if not please check out [MySQL download page](https://dev.mysql.com/downloads/installer/) and follow [these instructions](http://dev.mysql.com/doc/refman/5.7/en/installing.html).
 To check your MySQL installation, run following command in command line:
 ```
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.5.52, for debian-linux-gnu (x86_64) using readline 6. # sample output
 ```
-Maven build tool, if not please checkout https://maven.apache.org/install.html
+Maven build tool, if not please checkout [maven installation page](https://maven.apache.org/install.html)
 To check your Maven installation, run following command in command line:
 ```
 $ mvn --version
@@ -25,11 +25,6 @@ OS name: "linux" version: "3.16.0-38-generic" arch: "amd64" Family: "unix"
 ```
 To start this example run commands listed below.
 
-Set up MySQL database, use -u -p flags to provide your user name and password:
-```
-$  mysql < database_backup.sql
-```
-
 Clone the repository from github.com to your workspace folder:
 
 ```
@@ -39,6 +34,11 @@ $ git clone git@github.com:anychart-integrations/java-spring-hibernate-mysql-tem
 Navigate to the repository folder:
 ```
 $ cd java-spring-hibernate-mysql-template
+```
+
+Set up MySQL database, use -u -p flags to provide your user name and password:
+```
+$  mysql < database_backup.sql
 ```
 
 Run app
